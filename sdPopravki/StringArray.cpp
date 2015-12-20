@@ -21,6 +21,7 @@ void insertion_sort (string ** arr, int length){
 }
 
 int main(){
+	cout<<"enter input ";
 	char input [1024];
 	cin.getline(input,1024);
 	
@@ -54,5 +55,24 @@ int main(){
 		cout<<t<<endl;
 	}
 	
+
+	cout<<"Enter ";
+	int begin,end;
+	cin.clear();
+	cin>>begin;
+	cin>>end;
+	cin.clear();
+	cin.ignore(10000, '\n');
+	cout<<"query ";
+	char query [1024];
+	cin.getline(query,1024);
+	string what(query);
+	int cnt =0;
+	for(int i=begin;i<end;i++){
+		if(test[i]->substr(0,what.size()) == what){
+			cnt ++;
+		}
+	}
+	cout << "result = " << cnt;
 
 }
